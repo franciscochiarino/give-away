@@ -13,6 +13,7 @@ Give Away is a basic React application intended for people to give away stuff th
 
 ![home](./wireframes/Home.jpg)
 ![add idem](./wireframes/AddItem.jpg)
+![components](./wireframes/Components.jpg)
 
 ## New skills
 
