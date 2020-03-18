@@ -1,0 +1,21 @@
+.categoriesContainer {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0.5rem
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category > button {
+    background-color: transparent;
+    border: none;
+}
+
+.categoryName {
+    margin-top: 0.5rem;
+}
