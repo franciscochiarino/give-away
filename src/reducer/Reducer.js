@@ -8,7 +8,12 @@ const initialState = {
             location: 'Mitte'
         }
     ],
-    categories: ['Furniture', 'Clothes', 'Food', 'Books']
+    categories: [
+        {name: 'Furniture', iconSrc: '../assets/furniture.png'}, 
+        {name: 'Clothes', iconSrc: '../assets/clothes.png'}, 
+        {name: 'Food', iconSrc: '../assets/food.png'}, 
+        {name: 'Books', iconSrc: '../assets/books.png'}
+    ]
 }
 
 export function Reducer(state = initialState, action) {

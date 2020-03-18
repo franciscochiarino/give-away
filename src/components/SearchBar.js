@@ -10,7 +10,7 @@ export default function SearchBar() {
                 <input type="text" placeholder="Search"/>
             </form>
             <BrowserRouter>
-                <Link to="/AddItem"><img src="../assets/more.png" alt=""/></Link>
+                <Link to="/AddItem"><img src="../assets/add-item.png" alt=""/></Link>
                 <Route path="/AddItem" exact render={AddItem} /> 
             </BrowserRouter>
         </div>
