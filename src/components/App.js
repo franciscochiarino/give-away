@@ -4,15 +4,24 @@ import SearchBar from './SearchBar';
 import '../style/App.css'
 import CategoriesContainer from './CategoriesContainer';
 import CardsContainer from './CardsContainer';
-import {BrowserRouter, Route, Link} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
+import AddItem from './AddItem'
 
 function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <SearchBar />
-                <CategoriesContainer />
-                <CardsContainer />
+
+                <Route path="/" exact>
+                    <SearchBar />
+                    <CategoriesContainer />
+                    <CardsContainer />
+                </Route>
+
+                <Route path="/AddItem" exact>
+                    <AddItem />
+                </Route>
+
             </BrowserRouter>
         </div>
     );
