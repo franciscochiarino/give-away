@@ -1,18 +1,14 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import '../style/CategoriesContainer.css'
+import Category from './Category'
 
 function CategoriesContainer(props) {
 
     // Map categories to display them
     const displayCategories = props.state.categories.map((category, i) => {
         return (
-            <li key={i} className="category" >
-                <button>
-                    <img src={require(`../assets/${category.name}.png`)} alt=""/>
-                    <p className="categoryName">{category.name}</p>
-                </button>
-            </li>
+            <Category key={i} name={category.name} />
         )
     })
 

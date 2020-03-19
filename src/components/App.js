@@ -4,13 +4,16 @@ import SearchBar from './SearchBar';
 import '../style/App.css'
 import CategoriesContainer from './CategoriesContainer';
 import CardsContainer from './CardsContainer';
+import {BrowserRouter, Route, Link} from 'react-router-dom';
 
 function App() {
     return (
         <div className="App">
-            <SearchBar />
-            <CategoriesContainer />
-            <CardsContainer />
+            <BrowserRouter>
+                <SearchBar />
+                <CategoriesContainer />
+                <CardsContainer />
+            </BrowserRouter>
         </div>
     );
 }
