@@ -1,17 +1,14 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import '../style/CardsContainer.css'
+import Card from './Card'
 
 function CardsContainer(props) {
 
     // Get items from Reducer
     const displayItems = props.state.items.map(item => {
         return (
-            <div key={item.id} className="card">
-                <img className="itemImage" src={item.imgSrc} alt={item.title}/>
-                <p className="itemLocation">{item.location}</p>
-                <p className="itemTitle">{item.title}</p>
-            </div>
+            <Card key={item.id} title={item.title} location={item.location} img={item.imgSrc} /> 
         )
     })
 
