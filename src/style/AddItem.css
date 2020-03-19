@@ -49,3 +49,14 @@
 .postBtn {
     background-color: #4D5EB8;
 }
+
+.addItemPostedMessage {
+    text-align: center;
+    padding-top: 3rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.addItemPostedMessage > * {
+    padding-bottom: 2rem;
+}
