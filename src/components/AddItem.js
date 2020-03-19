@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, {useState} from 'react'
 import AddItemTopBar from './AddItemTopBar'
 import AddItemForm from './AddItemForm'
 import AddItemPostedMessage from './AddItemPostedMessage'
@@ -6,17 +6,13 @@ import { connect } from 'react-redux'
 
 function AddItem(props) {
 
-    // Set itemIsPosted to false when component mounts
-    useEffect(() => {
-        props.dispatch({
-            type: 'MAKE_POSTED_FALSE'
-        })
-    })
+    const [postState, setPostState] = useState(false);
 
+    
     return (
         <div>
             <AddItemTopBar />
-            {props.state.posted ? <AddItemPostedMessage /> : <AddItemForm /> }
+            {posted ? <AddItemPostedMessage /> : <AddItemForm /> }
         </div>
     )
 }
