@@ -23,14 +23,19 @@ const initialState = {
         {name: 'Clothes'}, 
         {name: 'Food'}, 
         {name: 'Books'}
-    ]
+    ],
+    posted: false,
 }
 
 export function Reducer(state = initialState, action) {
     switch(action.type) {
+
         case 'ADD_ITEM':
             let newItem = action.payload;
-            return {...state, items: [...state.items, newItem]}
+            return {...state, items: [...state.items, newItem], posted: true}
+
+        case 'MAKE_POSTED_FALSE':
+            return {...state, posted: false}
         default:
             return state
     }
