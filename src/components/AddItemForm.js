@@ -42,7 +42,8 @@ function AddItemForm(props) {
             }
         })
 
-        cleanForm()
+        cleanForm();
+        props.changeState();
     }
 
     return (

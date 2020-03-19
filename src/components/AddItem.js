@@ -2,23 +2,19 @@ import React, {useState} from 'react'
 import AddItemTopBar from './AddItemTopBar'
 import AddItemForm from './AddItemForm'
 import AddItemPostedMessage from './AddItemPostedMessage'
-import { connect } from 'react-redux'
 
-function AddItem(props) {
+function AddItem() {
 
     const [postState, setPostState] = useState(false);
 
+    const changeState = () => {
+        return setPostState(!postState)
+    }
     
     return (
         <div>
             <AddItemTopBar />
-            {posted ? <AddItemPostedMessage /> : <AddItemForm /> }
+            {posted ? <AddItemPostedMessage /> : <AddItemForm changeState={changeState} /> }
         </div>
     )
 }
-
-const mapStateToProps = state => {
-    return {state: state}
-}
-
-export default connect(mapStateToProps)(AddItem);
