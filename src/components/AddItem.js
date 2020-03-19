@@ -3,7 +3,7 @@ import AddItemTopBar from './AddItemTopBar'
 import AddItemForm from './AddItemForm'
 import AddItemPostedMessage from './AddItemPostedMessage'
 
-function AddItem() {
+export default function AddItem() {
 
     const [postState, setPostState] = useState(false);
 
@@ -14,7 +14,7 @@ function AddItem() {
     return (
         <div>
             <AddItemTopBar />
-            {posted ? <AddItemPostedMessage /> : <AddItemForm changeState={changeState} /> }
+            {postState ? <AddItemPostedMessage /> : <AddItemForm changeState={changeState} /> }
         </div>
     )
 }
