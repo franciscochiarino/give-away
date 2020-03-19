@@ -1,11 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import AddItem from './AddItem';
-import '../style/SearchBar.css';
 
 export default function SearchBar() {
     return (
-        <div className="searchBar">
+        <div className="topBar">
             <form>
                 <input type="text" placeholder="Search"/>
             </form>
