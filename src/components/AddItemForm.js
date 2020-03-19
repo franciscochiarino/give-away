@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
 import '../style/AddItem.css'
+import {connect} from 'react-redux';
 
-export default function AddItemForm() {
+function AddItemForm(props) {
 
     // Input variables
+    const [imgSrc] = useState('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frender.fineartamerica.com%2Fimages%2Frendered%2Fsmall%2Fposter%2Fimages-square-real-5%2Fpantone-186-fire-engine-red-color-on-worn-canvas-design-turnpike.jpg&f=1&nofb=1')
     const [title, setTitle] = useState('');
     const [category, setCategory] = useState('');
     const [description, setDescription] = useState('');
@@ -17,7 +19,19 @@ export default function AddItemForm() {
 
     // Dispatch
     const dispatchItem = e => {
-        
+        e.preventDefault();
+
+        props.dispatch({
+            type: 'ADD_ITEM',
+            payload: {
+                id: props.state.items.length,
+                imgSrc,
+                title,
+                category,
+                description,
+                location
+            }
+        })
     }
 
     return (
@@ -54,3 +68,9 @@ export default function AddItemForm() {
         </div>
     )
 }
+
+const mapStateToProps = state => {
+    return {state: state}
+}
+
+export default connect(mapStateToProps)(AddItemForm);
