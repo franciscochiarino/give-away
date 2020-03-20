@@ -64,7 +64,8 @@ const initialState = {
         {name: 'Food'}, 
         {name: 'Books'}
     ],
-    searchCategory: ''
+    searchCategory: '',
+    searchTerm: ''
 }
 
 export function Reducer(state = initialState, action) {
@@ -76,6 +77,10 @@ export function Reducer(state = initialState, action) {
 
         case 'SEARCH_CATEGORY':
             return {...state, searchCategory: action.payload}
+
+        case 'SEARCH_TERM':
+            return {... state, searchTerm: action.payload}
+            
         default:
             return state
     }

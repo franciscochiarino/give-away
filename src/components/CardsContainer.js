@@ -5,8 +5,15 @@ import Card from './Card'
 
 function CardsContainer(props) {
 
+    // Filter cards by search term
+    const filterSearchTerm = props.state.items.filter(item => {
+        let itemTitle = item.title.toLocaleLowerCase();
+        let userSearch = props.state.searchTerm.toLocaleLowerCase();
+        return itemTitle.includes(userSearch);
+    })
+
     // Filter cards by category
-    const filterCategory = props.state.items.filter(item => {
+    const filterCategory = filterSearchTerm.filter(item => {
         return item.category.includes(props.state.searchCategory);
     })
 
