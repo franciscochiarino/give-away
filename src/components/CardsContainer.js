@@ -5,8 +5,15 @@ import Card from './Card'
 
 function CardsContainer(props) {
 
+    // Filter searched category 
+    let filteredItems = [...props.state.items];
+
+    if (props.state.searchCategory) {
+        filteredItems.filter(item => item.category === props.state.searchCategory);
+    } 
+
     // Get items from Reducer
-    const displayItems = props.state.items.map(item => {
+    const displayItems = filteredItems.map(item => {
         return (
             <Card key={item.id} id={item.id} title={item.title} location={item.location} img={item.imgSrc} description={item.description}/> 
         )

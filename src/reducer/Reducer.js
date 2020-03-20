@@ -64,6 +64,7 @@ const initialState = {
         {name: 'Food'}, 
         {name: 'Books'}
     ],
+    searchCategory: ''
 }
 
 export function Reducer(state = initialState, action) {
@@ -73,6 +74,8 @@ export function Reducer(state = initialState, action) {
             let newItem = action.payload;
             return {...state, items: [...state.items, newItem], posted: true}
 
+        case 'SEARCH_CATEGORY':
+            return {...state, searchCategory: action.payload}
         default:
             return state
     }

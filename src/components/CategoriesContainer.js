@@ -5,6 +5,7 @@ import Category from './Category'
 
 function CategoriesContainer(props) {
 
+    
     // Map categories to display them
     const displayCategories = props.state.categories.map((category, i) => {
         return (
