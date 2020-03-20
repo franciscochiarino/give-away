@@ -8,7 +8,7 @@ function CardsContainer(props) {
     // Get items from Reducer
     const displayItems = props.state.items.map(item => {
         return (
-            <Card key={item.id} title={item.title} location={item.location} img={item.imgSrc} /> 
+            <Card key={item.id} id={item.id} title={item.title} location={item.location} img={item.imgSrc} description={item.description}/> 
         )
     })
 

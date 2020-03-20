@@ -23,7 +23,7 @@ function App() {
                     <AddItem />
                 </Route>
 
-                <Route path="/ViewItem" exact>
+                <Route path="/ViewItem">
                     <ViewItem />
                 </Route>
 
