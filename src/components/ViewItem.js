@@ -1,20 +1,19 @@
 import React from 'react'
 import ViewItemTopBar from './ViewItemTopBar'
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 
 function ViewItem(props) {
-
-    const itemId = window.location.href[window.location.href.length - 1];
-    const [selectedItem] = props.state.items.filter(item => item.id === parseInt(itemId, 10));
-    console.log(selectedItem)
+    console.log(props.match.params.id);
+    
+    const [currentItem] = props.state.items.filter(item => item.id === parseInt(props.match.params.id, 10));
 
     return (
         <div>
-            <ViewItemTopBar itemName={selectedItem.title} />
-            <img src={selectedItem.imgSrc} alt={selectedItem.title}/>
-            <h3>{selectedItem.title}</h3>
-            <p>{selectedItem.location}</p>
-            <p>{selectedItem.description}</p>
+            <ViewItemTopBar itemName={currentItem.title} />
+            <img src={currentItem.imgSrc} alt={currentItem.title}/>
+            <h3>{currentItem.title}</h3>
+            <p>{currentItem.location}</p>
+            <p>{currentItem.description}</p>
         </div>
     )
 }

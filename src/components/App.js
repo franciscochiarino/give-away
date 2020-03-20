@@ -4,7 +4,7 @@ import SearchBar from './SearchBar';
 import '../style/App.css'
 import CategoriesContainer from './CategoriesContainer';
 import CardsContainer from './CardsContainer';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import AddItem from './AddItem'
 import ViewItem from './ViewItem';
 
@@ -13,20 +13,16 @@ function App() {
         <div className="App">
             <BrowserRouter>
 
-                <Route path="/" exact>
-                    <SearchBar />
-                    <CategoriesContainer />
-                    <CardsContainer />
-                </Route>
+                <Switch>
+                    <Route path="/" exact>
+                        <SearchBar />
+                        <CategoriesContainer />
+                        <CardsContainer />
+                    </Route>
 
-                <Route path="/AddItem" exact>
-                    <AddItem />
-                </Route>
-
-                <Route path="/ViewItem">
-                    <ViewItem />
-                </Route>
-
+                    <Route path="/AddItem" exact component={AddItem} />
+                    <Route path="/ViewItem/:id" component={ViewItem} />
+                </Switch>
             </BrowserRouter>
         </div>
     );
