@@ -3,7 +3,6 @@ import ViewItemTopBar from './ViewItemTopBar'
 import { connect } from 'react-redux'
 
 function ViewItem(props) {
-    console.log(props.match.params.id);
     
     const [currentItem] = props.state.items.filter(item => item.id === parseInt(props.match.params.id, 10));
 
