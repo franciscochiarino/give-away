@@ -11,8 +11,9 @@ Give Away is a basic React application intended for people to give away stuff th
 
 ## Wireframes
 
-![home](./wireframes/Home.jpg)
-![add idem](./wireframes/AddItem.jpg)
+![home wireframe](./wireframes/Home.jpg)
+![add item wireframe](./wireframes/AddItem.jpg)
+![view item wireframe](./wireframse/ViewItem.jpg)
 ![components](./wireframes/Components.jpg)
 
 ## New skills
