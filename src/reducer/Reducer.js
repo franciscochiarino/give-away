@@ -1,4 +1,3 @@
-
 const initialState = {
     items: [
         {
@@ -79,10 +78,9 @@ export function Reducer(state = initialState, action) {
             return {...state, searchCategory: action.payload}
 
         case 'SEARCH_TERM':
-            return {... state, searchTerm: action.payload}
+            return {...state, searchTerm: action.payload}
             
         default:
             return state
     }
 }
-

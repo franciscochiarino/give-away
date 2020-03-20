@@ -1,6 +1,5 @@
 import React from 'react'
-import {Link, Route, BrowserRouter} from 'react-router-dom'
-import ViewItem from './ViewItem'
+import {Link} from 'react-router-dom'
 
 export default function Card({id, title, location, img, description}) {
 
