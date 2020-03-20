@@ -6,6 +6,7 @@ import CategoriesContainer from './CategoriesContainer';
 import CardsContainer from './CardsContainer';
 import {BrowserRouter, Route} from 'react-router-dom';
 import AddItem from './AddItem'
+import ViewItem from './ViewItem';
 
 function App() {
     return (
@@ -20,6 +21,10 @@ function App() {
 
                 <Route path="/AddItem" exact>
                     <AddItem />
+                </Route>
+
+                <Route path="/ViewItem" exact>
+                    <ViewItem />
                 </Route>
 
             </BrowserRouter>
