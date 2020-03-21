@@ -23,12 +23,14 @@ function SearchBar(props) {
 
     return (
         <div className="topBar">
-            <form onSubmit={dispatchUserSearch}>
+            <img src={require("../assets/icons/menu_white_24dp.png")} alt="menu icon" width="42"/>
+            <form onSubmit={dispatchUserSearch} className="searchForm">
                 <input type="text" placeholder="Search" onChange={handleSearch} value={userSearch}/>
+                <button type="submit"><img src={require("../assets/icons/search_white_24dp.png")} alt="search icon" width="42" /></button>
             </form>
-                <Link to="/AddItem">
-                    <img id="addItem" src={require("../assets/add-item.png")} alt="" width="24" height="24" style={{marginTop: '0.2rem'}}/>
-                </Link>
+            <Link to="/AddItem" id="addBtn">
+                <img id="addItem" src={require("../assets/icons/add_white_24dp.png")} alt="add item icon" />
+            </Link>
         </div>
     )
 }
